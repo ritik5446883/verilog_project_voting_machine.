@@ -2,18 +2,14 @@
 This project focuses on the design and implementation of a digital voting machine using Verilog HDL. The voting machine allows users to vote for one of four candidates by pressing corresponding buttons. The machine debounces the button presses, logs valid votes, and displays the results on LEDs based on the operating mode (voting or result display).
 # Components and Functionality
 1. Button Control Module (buttoncontrol)
-2. 
-Purpose: Debounces button presses and registers valid votes.
-
+2. Purpose: Debounces button presses and registers valid votes.
 Inputs:
 'clock': System clock signal.
 'reset': Reset signal to initialize the module.
 'button': Button press signal.
-
 Output:
 'valid_vote': Signal indicating a valid vote has been registered.
 Description: This module uses a counter to debounce the button presses. When a button is pressed, the counter increments, and once it reaches a threshold (10 in this case), a valid vote is registered. If the button is released before reaching the threshold, the counter resets.
-
 
 3. Mode Control Module (modecontrol)
 Purpose: Manages the operating mode (voting or result display) and controls LED outputs.
